@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Omnifood is a premium food delivery service with the mission to bring affordable and health meals to as many people as possible.">
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">  
@@ -10,6 +12,16 @@
         <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400" rel="stylesheet">
         <title>Omnidfood</title>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="resources/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="resources/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="resources/icons/favicon-16x16.png">
+        <link rel="manifest" href="resources/icons/site.webmanifest">
+        <link rel="mask-icon" href="resources/icons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="resources/icons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="resources/icons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
     </head>
     <body>
         <header>
@@ -17,6 +29,12 @@
                 <div class="row">
                     <img src="resources/css/img/logo-white.png" alt="Omnifood logo" class="logo">
                     <img src="resources/css/img/logo.png" alt="Omnifood logo" class="logo-black"> 
+                    <ul class="main-nav">
+                        <li><a href="#features">Food delivery</a></li>
+                        <li><a href="#works">How it works</a></li>
+                        <li><a href="#cities">Our cities</a></li>
+                        <li><a href="#plans">Sign Up</a></li>
+                    </ul>
                     <ul class="main-nav hidden-nav">
                         <li><a href="#features">Food delivery</a></li>
                         <li><a href="#works">How it works</a></li>
@@ -142,8 +160,8 @@
                         <div>3</div>
                         <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
                     </div>
-                    <a href="#" class="btn-app"><img src="resources/img/download-app.svg"></a>
-                    <a href="#" class="btn-app"><img src="resources/img/download-app-android.png"></a>
+                    <a href="#" class="btn-app"><img src="resources/img/download-app.svg" alt="Apple app store button."></a>
+                    <a href="#" class="btn-app"><img src="resources/img/download-app-android.png" alt="Android app store button"></a>
                 </div>
             </div>
         </section>
@@ -234,13 +252,13 @@
             </div>
             <div class="row">
                 <div class="col span-1-of-3">
-                    <blockquote>Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!<cite><img src="resources/img/customer-1.jpg">(Alberto Duncan)</cite></blockquote>
+                    <blockquote>Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!<cite><img src="resources/img/customer-1.jpg" alt="Image of customer 1.">(Alberto Duncan)</cite></blockquote>
                 </div>
                 <div class="col span-1-of-3">
-                    <blockquote>Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!<cite><img src="resources/img/customer-2.jpg">(Joana Silva)</cite></blockquote>
+                    <blockquote>Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!<cite><img src="resources/img/customer-2.jpg" alt="Image of customer 2.">(Joana Silva)</cite></blockquote>
                 </div>
                 <div class="col span-1-of-3">
-                    <blockquote>I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!<cite><img src="resources/img/customer-3.jpg">(Milton Chapman)</cite></blockquote>
+                    <blockquote>I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!<cite><img src="resources/img/customer-3.jpg" alt="Image of customer 3.">(Milton Chapman)</cite></blockquote>
                 </div>
             </div>
         </section>
@@ -361,7 +379,7 @@
                             <label for="message">Drop us a line</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <textarea name="message" placeholder="Your message"></textarea>
+                            <textarea name="message" id="message" placeholder="Your message"></textarea>
                         </div>
                     </div>
                     <div class="row">
