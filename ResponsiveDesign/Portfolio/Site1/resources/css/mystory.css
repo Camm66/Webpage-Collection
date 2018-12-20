@@ -1,0 +1,76 @@
+body {
+    background-color: rgba(60, 150, 4, 0.04);
+}
+
+.row {
+    width: 80%;
+    background-color: #fff;
+}
+
+p {
+    text-align: left;
+    line-height: 2;
+    padding-bottom: 2%;
+}
+
+.story-title {
+    margin-bottom: 5%;
+    padding-top: 5%;
+}
+
+.part1,
+.part2,
+.part3,
+.part4 {
+    margin-bottom: 5%;
+}
+
+.story-img1 {
+    float: left;
+    width: 60%;
+}
+.story-img2 {
+    float: right;
+    width: 23%;
+}
+.story-img3 {
+    float: left;
+    width: 35%
+}
+.story-img4 {
+    float: right;
+    width: 32%;
+}
+.story-img5 {
+    margin-left: 30%;
+    width: 40%;
+}
+
+
+/* Small phones small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px){
+    .story-img1,
+    .story-img2,
+    .story-img3,
+    .story-img4,
+    .story-img5 {
+        float:none;
+    }
+    
+    .story-img1{
+        width: 100%;
+    }
+    
+    .story-img2,
+    .story-img3,
+    .story-img4{
+        margin-left: 25%;
+        width: 50%;
+    }
+    
+    .story-img5 {
+        margin-left: 12%;
+        width: 80%;
+    }  
+}
+
