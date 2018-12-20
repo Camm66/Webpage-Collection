@@ -26,12 +26,12 @@ $(document).ready(function() {
         for(var i = 0; i < badges.length; i++){
             badges[i].style.backgroundColor = "";
         }
-        badges[slideIndex-1].style.backgroundColor = "green";
-        timer = setTimeout(function(){plusDivs(1)}, 7000);
+        badges[slideIndex-1].style.backgroundColor = "#3c9604";
+        timer = setTimeout(function(){plusDivs(1)}, 10000);
     }
     
     /*Alter slide index buttons*/
-    badges[0].style.backgroundColor = "green";
+    badges[0].style.backgroundColor = "#3c9604";
     for(i = 1; i < badges.length + 1; i++){
         badges[i-1].addEventListener('click', 
             (function(i){ 

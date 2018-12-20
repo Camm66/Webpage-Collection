@@ -6,6 +6,12 @@
 @media only screen and (max-width: 1023px){
     body { font-size: 18px;}
     section { padding: 60px 0; }
+    
+    .js--mobile-nav { display: none; }
+    
+    .slide-info {
+        display: none;
+    }
 }
 
 /* Small phones small tablets: from 481px to 767px */
@@ -19,10 +25,6 @@
     .row { padding: 0 4%; }
     
     .col.span-1-of-3.box { width: 100%; padding-bottom: 5%; }
-    
-    .slide-info {
-        display: none;
-    }
     
     
     /*-----Nav-----*/
