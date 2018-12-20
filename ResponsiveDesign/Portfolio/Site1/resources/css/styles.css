@@ -170,7 +170,6 @@ h2:after {
 .slideshow {
     position: relative;
     width: 100%;
-    box-shadow: 1px 2px rgba(6, 16, 0, 0.72);
 }
 
 .slide,
@@ -297,6 +296,7 @@ h2:after {
 
 .box img {
     width: 100%;
+    margin-bottom: 4%;
 }
 
 .box img:hover {
@@ -305,6 +305,7 @@ h2:after {
 
 .box p {
     text-align: center;
+    margin-bottom: 5%;
 }
 
 

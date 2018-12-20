@@ -77,6 +77,10 @@
 @media only screen and (max-width: 480px){
     section { padding: 20px 0; }
     
+    .slide-badge{
+        display: none;
+    }
+    
     .footer-nav,
     .social-links { float: none; }
 
