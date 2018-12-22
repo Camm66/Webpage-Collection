@@ -4,13 +4,42 @@
         <link rel="stylesheet" type="text/css" href="../vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="../vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="../vendors/css/animate.css">
-        <link rel="stylesheet" href="../resources/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="../vendors/css/ionicons.min.css">
         <link rel="stylesheet" href="../resources/css/mystory.css">
+        <link rel="stylesheet" href="../resources/css/styles.css">
         <link rel="stylesheet" href="../resources/css/queries.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400" rel="stylesheet">
     </head>
     <body>
-        <section class="sections-mystory">
+        <header>
             <div class="row">
+                <img src="../resources/img/cropped-cropped-MGO-header3.jpg" class="logo-img">
+                <nav>
+                    <ul class="menu-nav main-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">My Story</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Buy Now</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Recipes</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                    <ul class="menu-nav js--mobile-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Buy Now</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Recipes</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                    <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+                </nav>
+            </div>
+        </header>
+        
+        
+        <section class="sections-mystory">
+            <div class="row story-container">
                 <div class="story-title">
                     <h1>My Story</h1>
                     <h2>THE ROOTS OF MAVRA’S GREEK OIL</h2>
@@ -36,8 +65,12 @@
                 </div>
             </div>
         </section>
+        
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="../vendors/js/jquery.waypoints.min.js"></script>
         <script src="../resources/js/story-animations.js"></script>
+        <script src="../resources/js/animations.js"></script>
+        <script src="../resources/js/mobile-nav.js"></script>
     </body>
 </html>

@@ -1,10 +1,10 @@
 body {
-    background-color: rgba(60, 150, 4, 0.04);
+    /*background-color: rgba(60, 150, 4, 0.04);*/
 }
 
-.row {
+.story-container {
     width: 80%;
-    background-color: #fff;
+    background: #fff;
 }
 
 p {
