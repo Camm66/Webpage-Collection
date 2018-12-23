@@ -1,21 +1,27 @@
+/*
+Colors:
+black - #3c3c3c
+red - #b10235
+
+*/
+
 /*-----------------------------------------*/
-/*--------------BASIC-SETUP----------------*/
+/*-----------BASIC-PAGE-SETUP--------------*/
 /*-----------------------------------------*/
 
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 html {
-    background-color: #fff;
-    color: #555;
-    font-family: 'Lato', 'Arial', sans-serif;
+    height: 100vh;
+    color: #3c3c3c; 
+    font-family: 'Titillium Web', 'Arial',  sans-serif;
     font-weight: 300px;
     font-size: 35px;
-    text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility; 
 }
 
 .clearfix { zoom: 1}
@@ -31,37 +37,98 @@ html {
 /*-----------------------------------------*/
 /*---------REUSABLE-COMPONENTS-------------*/
 /*-----------------------------------------*/
+h1 {font-weight: 400;}
+
+h2 {font-weight: 300;}
+
+section {
+    padding: 80px 10px 80px 10px;
+}
 
 .row {
     max-width:1140px;
+    margin:0 auto;
+}
+
+.page {
+    height: 100vh;
+    min-width: 100vw;
 }
 
 
-
 /*-----------------------------------------*/
-/*--------------HEADER-SECTION---------------*/
+/*--------------HEADER-SECTION-------------*/
 /*-----------------------------------------*/
 
-.main-container {
-    height:1300px;
-    position: relative;
+.header-section {
+    background: linear-gradient(to bottom right,#fff, #bfbfbf);
 }
-.main-heading {
-    width: 100%;
-    padding-left: 40%;
+
+
+.logo {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    bottom: 95%;
+    left: 85%;
+    animation-delay: 0.5s;
+}
+
+.home {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 20%;
     transform: translate(-50%, -50%);
+    margin-left: 10%;
+    font-size: 150%;
+    display: flex;
+    align-items: stretch;
+}
+.home__info {
+   flex: 0 0 120%; 
 }
 
+.name { 
+    margin-bottom: 1%;
+    animation-delay: 0.3s;
+}
+.titles { 
+    font-weight: 300;
+    font-style: italic;
+    margin-left: 9%;
+    animation-delay: 0.5s;
+}
 .main-nav {
     list-style: none;
+    margin-left: 4%;
+    animation-delay: 0.5s;
 }
 
-.main-nav a{
+.main-nav li{
     font-size: 120%;
-    text-decoration: none;
     float: left;
     margin: 5% 2% 5% 0;
+    cursor: none;
 }
+
+.main-nav li a{
+    font-size: 80%;
+    color: #b10235;
+    cursor: pointer;
+}
+
+.main-nav li a:hover {
+    text-decoration: none;
+    color:#3c3c3c;
+}
+
+/*-----------------------------------------*/
+/*-------------PORTFOLIO-SECTION-----------*/
+/*-----------------------------------------*/
+
+.portfolio-section {
+}
+
+/*-----------------------------------------*/
+/*---------------ABOUT-SECTION-------------*/
+/*-----------------------------------------*/
