@@ -22,4 +22,28 @@ $(document).ready(function() {
     }, {
         offset:'90%'
     });
+    
+    $('.js--circle').waypoint(function(direction) {
+        $('.js--circle').addClass('animated fadeIn');
+    }, {
+        offset:'90%'
+    });
+    
+    $('.js--social').waypoint(function(direction) {
+        $('.js--social').addClass('animated fadeIn');
+    }, {
+        offset:'90%'
+    });
+    
+    $('.js--page-header').waypoint(function(direction) {
+        $('.js--page-header').addClass('animated fadeIn');
+    }, {
+        offset: '95%'
+    });
+    
+    $('.js--portfolio').waypoint(function(direction) {
+        $('.js--portfolio').addClass('animated fadeIn');
+    }, {
+        offset: '95%'
+    });
 });

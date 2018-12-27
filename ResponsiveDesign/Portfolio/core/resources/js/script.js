@@ -7,4 +7,6 @@
         $('.js--scroll-to-about').click(function(){
         $('html, body').animate({scrollTop: $('.about-section').offset().top}, 1000);
     });
+     
+     const circleType = new CircleType(document.getElementById('circle-text'));
 });
