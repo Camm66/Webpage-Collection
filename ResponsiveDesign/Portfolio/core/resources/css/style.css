@@ -126,6 +126,36 @@ section { padding: 10px; }
     color:#3c3c3c;
 }
 
+/*--StickyNav--*/
+
+.sticky {
+    position: fixed;
+    top:0;
+    right:0;
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.93);
+    border-radius: 0 0 0 3px;
+    box-shadow: 0 1px 1px #4a4a4a;
+    z-index: 9999;
+}
+
+.sticky .main-nav { 
+    margin: 5px 10%;
+    float: left;
+    display: flex;
+}
+.sticky .main-nav li{
+    font-weight: 400;
+    font-size: 200%;
+    margin: 5%;
+}
+
+.current-page-nav{
+    text-decoration: line-through;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 
 /*------Rotating-Text------*/
 #circle-text {
@@ -158,7 +188,7 @@ section { padding: 10px; }
 .social {
     font-size: 160%;
     animation-delay: 1s;
-    margin-left: 20px;S
+    margin-left: 20px;
 }
 
 .social-links li {
