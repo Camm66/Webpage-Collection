@@ -43,7 +43,19 @@
         $('.js--scroll-to-about').click(function(){
         $('html, body').animate({scrollTop: $('.about-section').offset().top}, 1000);
     });
+
+/*----------------------Move Social icons to the About Me section---------------------------*/
+    $('.about-section').waypoint(function(direction){
+           if(direction =="down"){
+               $("#social").appendTo("#social-bottom");
+           }
+           else {
+               $("#social").appendTo("#social-top");
+           }
+       }, {
+        offset: "50%"
+    });  
      
-     /*Circle text functions*/
+/*----------------------Circle text animation---------------------------*/
      const circleType = new CircleType(document.getElementById('circle-text'));
 });

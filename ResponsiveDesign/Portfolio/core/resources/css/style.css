@@ -185,7 +185,7 @@ section { padding: 10px; }
 
 /*--------Social-Links-------*/
 
-.social {
+#social {
     font-size: 160%;
     animation-delay: 1s;
     margin-left: 20px;
@@ -195,6 +195,7 @@ section { padding: 10px; }
     list-style: none;
     display: inline-block;
     padding: 20px 10px;
+    margin: 0 0;
 }
 
 .social-links li a { color: #3c3c3c; }
@@ -207,7 +208,7 @@ section { padding: 10px; }
 .github-icon,
 .linkedin-icon,
 .google-icon,
-.instagram-icon{
+.soundcloud-icon{
     transition: color 0.2s;
 }
 
@@ -223,9 +224,11 @@ section { padding: 10px; }
     color: #0077b5;
 }
 
-.instagram-icon:hover {
-    color: #4c68d7;
+.soundcloud-icon:hover {
+    color: #FE6D35;
 }
+
+
 
 /*-----------------------------------------*/
 /*-------------PORTFOLIO-SECTION-----------*/
@@ -355,11 +358,59 @@ section { padding: 10px; }
 /*---------------ABOUT-SECTION-------------*/
 /*-----------------------------------------*/
 .about-section {
+    font-size: calc(10px + .5vw);
 }
 
-.about-section h1 {
-    font-size: 500%;
-    font-weight: 900;
-    margin: 2% 0 0 5%;
-    animation-delay: 0.3s;
+.profile {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 5%
+}
+
+.profile__img {
+    flex:0 1 20%;
+    margin-bottom: 3%;
+}
+.profile__img img {
+    width: 80%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+    border:5px solid black;
+    border-radius: 500px;
+}
+
+.profile__bio {
+    flex: 0 1 50%;
+    font-size: 110%;
+    margin: 0 2% 0 1%;
+}
+
+.profile__skills{
+    flex: 0 1 20%;
+    font-size: 150%;
+}
+.profile__skills h3{}
+
+.profile__links {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.resume-btn {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(60, 60, 60);
+    padding: 5% 10%;
+    border-radius: 50px;
+}
+
+.resume-btn:hover {
+    opacity: 0.7;
+}
+
+#social-bottom {
+    position: relative;
+    top: 15%;
 }
