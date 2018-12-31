@@ -4,10 +4,12 @@
 /*-----------------Use waypoint to implement sticky nav---------------------*/
     $('.portfolio-section').waypoint(function(direction){
         if(direction == "down"){
-            $("#nav").addClass("sticky").appendTo("#js--sticky-nav");
+            $('nav').addClass("sticky");
+            $("nav").appendTo("#js--sticky-nav");
            }
         else {
-            $("#nav").removeClass('sticky').appendTo("#js--home-nav");
+            $('nav').removeClass("sticky");
+            $("nav").appendTo("#js--home-nav");
         }
     }, {
         offset: '60px;'
@@ -38,13 +40,38 @@
 /*----------------------Scroll to selected section---------------------------*/
     $('.js--scroll-to-portfolio').click(function(){
         $('html, body').animate({scrollTop: $('.portfolio-section').offset().top}, 1000);
+        toggle();
+        
     });
     
-        $('.js--scroll-to-about').click(function(){
+    $('.js--scroll-to-about').click(function(){
         $('html, body').animate({scrollTop: $('.about-section').offset().top}, 1000);
+        toggle();
     });
+     
+/*-------------------------------Mobile navigation----------------------------*/
+    $('.js--nav-icon').click(function(){
+        toggle();
+        //nav.slideToggle(200);
+        
+    });
+     
+     function toggle(){
+        var nav = $('.js--main-nav');
+        var icon = $('.js--nav-icon i');
+         
+         if(icon.hasClass('ion-navicon-round')){
+            icon.addClass('ion-close-round');
+            icon.removeClass('ion-navicon-round');
+            $('.main-nav').removeClass('hidden-nav');
+        }else {
+            icon.addClass('ion-navicon-round');
+            icon.removeClass('ion-close-round');
+            $('.main-nav').addClass('hidden-nav');
+        }
+     }
 
-/*----------------------Move Social icons to the About Me section---------------------------*/
+/*-----------------Move Social icons to the About Me section------------------*/
     $('.about-section').waypoint(function(direction){
            if(direction =="down"){
                $("#social").appendTo("#social-bottom");
@@ -58,4 +85,17 @@
      
 /*----------------------Circle text animation---------------------------*/
      const circleType = new CircleType(document.getElementById('circle-text'));
+     
+/*----------------------------Tag Cloud---------------------------------*/
+     $("#tags a").tagcloud({
+         size: {
+             start: 12,
+             end: 28,
+             unit: '%'
+         },
+         color: {
+             start: '#555',
+             end: '#a00'
+         }
+     })
 });
