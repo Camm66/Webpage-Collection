@@ -1,8 +1,7 @@
  $(document).ready(function(){
      
-     
 /*-----------------Use waypoint to implement sticky nav---------------------*/
-    $('.portfolio-section').waypoint(function(direction){
+    $('#portfolio-section').waypoint(function(direction){
         if(direction == "down"){
             $('nav').addClass("sticky");
             $("nav").appendTo("#js--sticky-nav");
@@ -14,19 +13,18 @@
     }, {
         offset: '60px;'
     });
-     
 /*-------------------Cross current section in the nav-----------------------*/
         $('.home-content').waypoint(function(direction){
             $(".js--scroll-to-portfolio").removeClass("current-page-nav");
        });
      
-       $('.portfolio-section').waypoint(function(direction){
+       $('#portfolio-section').waypoint(function(direction){
            if(direction =="down"){
                $(".js--scroll-to-portfolio").addClass("current-page-nav");
            }
        });
      
-        $('.about-section').waypoint(function(direction){
+        $('#about-section').waypoint(function(direction){
            if(direction =="down"){
                $(".js--scroll-to-about").addClass("current-page-nav");
                 $(".js--scroll-to-portfolio").removeClass("current-page-nav");
@@ -39,26 +37,24 @@
      
 /*----------------------Scroll to selected section---------------------------*/
     $('.js--scroll-to-portfolio').click(function(){
-        $('html, body').animate({scrollTop: $('.portfolio-section').offset().top}, 1000);
+        $('html, body').animate({scrollTop: $('#portfolio-section').offset().top}, 1000);
         toggle();
         
     });
     
     $('.js--scroll-to-about').click(function(){
-        $('html, body').animate({scrollTop: $('.about-section').offset().top}, 1000);
+        $('html, body').animate({scrollTop: $('#about-section').offset().top}, 1000);
         toggle();
     });
      
 /*-------------------------------Mobile navigation----------------------------*/
     $('.js--nav-icon').click(function(){
         toggle();
-        //nav.slideToggle(200);
-        
     });
      
      function toggle(){
-        var nav = $('.js--main-nav');
-        var icon = $('.js--nav-icon i');
+        var nav = $('nav');
+        var icon = $('.mobile-nav-icon i');
          
          if(icon.hasClass('ion-navicon-round')){
             icon.addClass('ion-close-round');
@@ -72,12 +68,12 @@
      }
 
 /*-----------------Move Social icons to the About Me section------------------*/
-    $('.about-section').waypoint(function(direction){
+    $('#about-section').waypoint(function(direction){
            if(direction =="down"){
-               $("#social").appendTo("#social-bottom");
+               $(".social-links").appendTo("#social-bottom");
            }
            else {
-               $("#social").appendTo("#social-top");
+               $(".social-links").appendTo("#social-top");
            }
        }, {
         offset: "50%"

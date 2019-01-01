@@ -56,18 +56,17 @@ section { padding: 10px; }
 /*--------------HEADER-SECTION-------------*/
 /*-----------------------------------------*/
 
-.home-section {
-    background: linear-gradient(to bottom right,#fff, #bfbfbf);
-}
+#home-section { background: linear-gradient(to bottom right,#fff, #bfbfbf); }
 
 
-.logo {
+#logo {
     position: absolute;
     top: 5%;
     right: 5%;
     bottom: 95%;
     left: 85%;
     animation-delay: 1s;
+    display: none;
 }
 
 .home-content {
@@ -76,7 +75,7 @@ section { padding: 10px; }
     display: flex;
     flex-direction: row;
     width: 60%;
-    top: 60%;
+    top: 50%;
     left: 20%;
     transform: translate(-20%, -50%);
     margin-left: 10%;
@@ -115,6 +114,7 @@ section { padding: 10px; }
 }
 
 .main-nav li a{
+    font-size:100%;
     color: #b10235;
     cursor: pointer;
 }
@@ -125,15 +125,11 @@ section { padding: 10px; }
 }
 
 /*--StickyNav--*/
-header {
-    font-size: 12px;
-}
-
 .sticky {
     position: fixed;
     top: 0;
     right: 0%;
-    width: 30%;
+    width: 40%;
     background-color: rgba(255, 255, 255, 0.93);
     border-radius: 0 0 0 3px;
     box-shadow: 0 1px 1px #4a4a4a;
@@ -144,7 +140,7 @@ header {
     margin: 5px 10px;
     float: left;
 }
-.sticky .main-nav li{
+.sticky .main-nav li a{
     font-weight: 400;
     font-size: 200%;
     margin: 3%;
@@ -199,8 +195,7 @@ header {
 
 /*--------Social-Links-------*/
 
-#social {
-    font-size: 160%;
+.social-links {
     animation-delay: 1s;
     margin-left: 20px;
 }
@@ -216,7 +211,7 @@ header {
 
 .social-links li a:link,
 .social-links li a:visited{
-    font-size: 150%;
+    font-size: 450%;
 }
 
 .github-icon,
@@ -248,12 +243,12 @@ header {
 /*-------------PORTFOLIO-SECTION-----------*/
 /*-----------------------------------------*/
 
-.portfolio-section {
+#portfolio-section {
     background-color: #2f2f2f;
     font-size: 1vw;
 }
 
-.portfolio-section h1 {
+#portfolio-section h1 {
     color: #fff;
     font-size: 500%;
     font-weight: 900;
@@ -300,13 +295,13 @@ header {
 }
 
 .entry__img {
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
 }
 
 .entry__img {
     flex:0 1 45%;
     background-color: #3c3c3c;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
     width: 1vw;
     height: 67%;
 }
@@ -371,7 +366,7 @@ header {
 /*-----------------------------------------*/
 /*---------------ABOUT-SECTION-------------*/
 /*-----------------------------------------*/
-.about-section {
+#about-section {
     font-size: calc(10px + .5vw);
 }
 
@@ -429,6 +424,7 @@ header {
 
 #social-bottom {
     position: relative;
+    font-size: 70%;
     top: 15%;
 }
 
