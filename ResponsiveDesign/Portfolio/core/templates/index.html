@@ -4,16 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=2.0">
         <meta name="description" content="">
-        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-        <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">  
-        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
-        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendors/css/normalize.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendors/css/grid.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendors/css/animate.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendors/css/ionicons.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='resources/css/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='resources/css/queries.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,400,900" rel="stylesheet">
         <title>Cameron Morales</title>
     </head>
-    <body> 
+    <body>
         <header>
             <div id="js--sticky-nav">
             </div>
@@ -44,33 +44,33 @@
                         </nav>
                     </div>
                 </div>
-                
+
                 <div class="js--circle" id="circle-text">
                     &bull;&bull;HTML&bull;&bull;CSS&bull;&bull;JAVASCRIPT&bull;&bull;JAVA&bull;&bull;PYTHON&bull;&bull;WORDPRESS&bull;&bull;SQL
                 </div>
-                
+
             </figure>
         </section>
-        
+
         <section class="page clearfix" id="portfolio-section">
             <h1 class="js--page-header">Portfolio</h1>
             <div class="portfolio js--portfolio">
                 <div class="portfolio__entry">
-                        <img src="resources/css/img/Test_IMG.PNG" class="entry__img">
+                        <img src="{{ url_for('static', filename='resources/css/img/Test_IMG.png') }}" class="entry__img">
                     <div class="entry__content">
                         <h3>Example</h3>
                         <p>
-                            <b>Description:</b> 
+                            <b>Description:</b>
                             <br>
                             Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content.
                         </p>
                         <br><br>
                         <p>
-                            <b>Keywords:</b> 
+                            <b>Keywords:</b>
                             <br>
                             #HTML #CSS #JavaScript #Python #Flask #WebDesign
                         </p>
-                        
+
                     </div>
                     <div class="entry__links">
                         <h3>View</h3>
@@ -81,17 +81,17 @@
                     </div>
                 </div>
                 <div class="portfolio__entry">
-                    <img src="resources/css/img/Test_IMG.PNG" class="entry__img">
+                    <img src="{{ url_for('static', filename='resources/css/img/Test_IMG.png') }}" class="entry__img">
                     <div class="entry__content">
                         <h3>Example</h3>
                         <p>
-                            <b>Description:</b> 
+                            <b>Description:</b>
                             <br>
                             Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content.
                         </p>
                         <br><br>
                         <p>
-                            <b>Keywords:</b> 
+                            <b>Keywords:</b>
                             <br>
                             #HTML #CSS #JavaScript #Python #Flask #WebDesign
                         </p>
@@ -110,10 +110,10 @@
             <h1 class="js--page-header"></h1>
             <div class="profile">
                 <div class="profile__img">
-                    <img src="resources/css/img/blank-user.png">
+                    <img src="{{ url_for('static', filename='resources/css/img/blank-user.png') }}">
                     <div class="profile__links"><a href="#" class="resume-btn">Resume</a></div>
                 </div>
-                    <div class="profile__bio"><h1>About Cam</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae sapien sem. Suspendisse nec orci hendrerit, lobortis arcu et, viverra libero. Maecenas et tempor turpis, et ornare enim. Nam vitae interdum mauris. Mauris nisl neque, porttitor sit amet consectetur sit amet, feugiat sit amet urna. Ut vel nisi ac mi sodales suscipit. Vestibulum rhoncus pellentesque ipsum a consectetur. 
+                    <div class="profile__bio"><h1>About Cam</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae sapien sem. Suspendisse nec orci hendrerit, lobortis arcu et, viverra libero. Maecenas et tempor turpis, et ornare enim. Nam vitae interdum mauris. Mauris nisl neque, porttitor sit amet consectetur sit amet, feugiat sit amet urna. Ut vel nisi ac mi sodales suscipit. Vestibulum rhoncus pellentesque ipsum a consectetur.
                     <br>
                     <br>
                     Donec sit amet facilisis lectus. Ut auctor placerat est vel elementum. Aliquam varius condimentum lacus vel malesuada. Sed ac faucibus ante. Maecenas scelerisque lorem sed vestibulum tempus. Suspendisse pulvinar odio in mauris consequat bibendum.
@@ -138,12 +138,12 @@
         </section>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
-        <script src="vendors/js/jquery.waypoints.min.js"></script>
-        <script src='vendors/js/jquery.lettering.js'></script>
-        <script src="vendors/js/jquery.tagcloud.js"></script>
-        <script src="vendors/js/circletype.min.js"></script>
-        <script src="resources/js/animations.js"></script>
-        <script src="resources/js/font-drawing.js"></script>
-        <script src="resources/js/script.js"></script>
+        <script src="{{ url_for('static', filename='vendors/js/jquery.waypoints.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/js/jquery.lettering.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/js/jquery.tagcloud.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/js/circletype.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='resources/js/animations.js') }}"></script>
+        <script src="{{ url_for('static', filename='resources/js/font-drawing.js') }}"></script>
+        <script src="{{ url_for('static', filename='resources/js/script.js') }}"></script>
     </body>
 </html>
