@@ -19,9 +19,8 @@ html{
     color: #3c3c3c; 
     font-family: 'Titillium Web', 'Arial',  sans-serif;
     font-weight: 300px;
-    font-size: 10px;
+    font-size: calc(10px + .5vw);
     text-rendering: optimizeLegibility;
-    max-width: 1200px;
     display:block;
 }
 
@@ -42,15 +41,25 @@ h1 {font-weight: 400;}
 
 h2 {font-weight: 300;}
 
-section { padding: 10px; }
+section { 
+    padding: 10px; 
+    position: relative;
+}
 
 .page {
     height: 100vh;
     width: 100vw;
+    max-width: 1300px;
     margin:0 auto; 
-    display: block;
 }
 
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
 
 /*-----------------------------------------*/
 /*--------------HEADER-SECTION-------------*/
@@ -137,13 +146,15 @@ section { padding: 10px; }
 }
 
 .sticky .main-nav { 
-    margin: 5px 10px;
+    margin-left: 2%;
     float: left;
 }
 .sticky .main-nav li a{
-    font-weight: 400;
-    font-size: 200%;
-    margin: 3%;
+    font-size: 150%;
+}
+
+.sticky .main-nav--divider{
+    display: none;
 }
 
 .current-page-nav{
@@ -169,15 +180,16 @@ section { padding: 10px; }
 
 /*------Rotating-Text------*/
 #circle-text {
-    font-size: 100%;
+    font-size: 70%;
     color: #b10235;
     position: relative;
     flex: 0 1 auto;
     top: -10%;
     width:20%;
-    margin-left: 20%;
+    margin-left: 30%;
     animation: animate 20s infinite linear;
     animation-delay: 1s;
+    z-index: -1;
 }
 
 @keyframes animate
@@ -211,7 +223,7 @@ section { padding: 10px; }
 
 .social-links li a:link,
 .social-links li a:visited{
-    font-size: 450%;
+    font-size: 300%;
 }
 
 .github-icon,
@@ -245,12 +257,11 @@ section { padding: 10px; }
 
 #portfolio-section {
     background-color: #2f2f2f;
-    font-size: 1vw;
 }
 
 #portfolio-section h1 {
     color: #fff;
-    font-size: 500%;
+    font-size: 450%;
     font-weight: 900;
     margin: 2% 0 2% 5%;
     animation-delay: 0.3s;
@@ -258,63 +269,108 @@ section { padding: 10px; }
 
 /*-------Portfolio-Container---------*/
 .portfolio {
-    height:80%;
-    width:80%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
     margin: 0 auto;
-    overflow:hidden;
-    color:white;
-    padding:10px;
     animation-delay: .5s;
 }
 
-.portfolio:hover {
-  overflow-y: scroll;
-}
-
-.portfolio::-webkit-scrollbar {
-    width: 1.5em;
-}
- 
-.portfolio::-webkit-scrollbar-track:hover {
-  box-shadow: inset 0 0 10px white; 
-  border-radius: 10px;
-}
- 
-.portfolio::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.13);
-    border-radius: 10px;
-}
-
 /*--------Portfolio-Boxes--------*/
+
 .portfolio__entry {
-    display: flex;
-    margin: 10px auto 35px auto;
-    border-radius: 10px;
-    box-shadow: 0 30px 80px 10px rgba(0, 0, 0, 0.2);
-   
+    font-size: 90%;
+    color: rgb(60, 60, 60);
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.63);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    margin: 0 auto 2% auto;
+    padding: 3% 0 3% 0;
+    grid-row: 1;
+}
+.entry__img {
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+}
+.entry__img img{
+    border-radius: 5px;
+    width: 60%;
+}
+.entry__description {
+    grid-column: 2;
+    grid-row: 1/2;
+}
+
+.entry__links{
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+}
+.entry__links ul{
+    font-size: 80%;
+    margin: 5% 0 0 5%;
+}
+.entry__links ul li {
+    display: inline-block;
+    margin-right: 7%;
+}
+
+
+
+.portfolio__nav {
+    grid-row: 2;
+    width: 80%;
+    margin: 5% auto; 
+    text-align: center;
+}
+.portfolio__nav_thumb{
+    width: 20%;
+    border-radius: 5px;
+    margin-right: 8%;
+}
+.portfolio__nav_thumb:hover {
+    border: 5px solid blue;
+}
+.portfolio__nav_selected{
+    border: 5px solid red;
+}
+/*
+.portfolio__entry {
+    flex: 0 1 30%;
+    margin-right: 5%;
+}
+
+.portfolio__thumb {
 }
 
 .entry__img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.2); 
 }
 
-.entry__img {
-    flex:0 1 45%;
-    background-color: #3c3c3c;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-    width: 1vw;
-    height: 67%;
+.entry__content,
+.entry__links {
+    display: none
 }
 
 .portfolio__entry h3 {
-    font-size: 200%;
     color: black;
     text-align: center;
     padding: 4% 0 6% 0;
 }
 
+.entry__content h3,
+.entry__links h3 {
+    font-size: 150%;
+}
+
 .entry__content{
-    font-size: 120%;
+    font-size: 90%;
     color: white;
     background: rgba(255, 255, 255, 0.32);
     flex: 1;
@@ -322,36 +378,19 @@ section { padding: 10px; }
 }
 
 
-.entry__links{
-    flex: 0 1 12%;
-    background: white;
-    text-align: center;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-}
 
-.entry__links h3 {
-    padding: 12% 0;
-}
-
-.entry__links ul{
-    padding-top: 40%;
-    list-style: none;
-}
-
-.entry__links ul li{
-    padding-bottom: 40%;
-}
+*/
 
 
 .link-btn {
-    background-color: rgb(60, 60, 60);
-    border: none;
     color: white;
-    padding: 6% 12%;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    border: none;
+    text-align:center;
+    float: right;
+    background-color: rgb(60, 60, 60);
+    padding: 5px 5px;
     cursor: pointer;
     transition: opacity 0.3s;
     border-radius: 500px;
@@ -366,9 +405,6 @@ section { padding: 10px; }
 /*-----------------------------------------*/
 /*---------------ABOUT-SECTION-------------*/
 /*-----------------------------------------*/
-#about-section {
-    font-size: calc(10px + .5vw);
-}
 
 .profile {
     width: 90%;
@@ -399,12 +435,6 @@ section { padding: 10px; }
     border-radius:3px;
 }
 
-.profile__skills{
-    flex: 0 1 25%;
-    font-size: 150%;
-}
-.profile__skills h3{}
-
 .profile__links {
     text-align: center;
     margin-top: 20%;
@@ -429,8 +459,31 @@ section { padding: 10px; }
 }
 
 /*-----tag-cloud-----*/
+.profile__skills{
+    font-size: 150%;
+    position: relative;
+    flex: 0 1 25%;
+}
+
 #tags a{
     margin: 8%;
     font-size: 10px;
     text-decoration: none;
+}
+
+/*-----------------------------------------*/
+/*--------------CONTACT-SECTION------------*/
+/*-----------------------------------------*/
+#contact-section {
+    background-color: #2f2f2f;
+}
+
+.contact-section {
+    height:80%;
+    width:80%;
+    margin: 0 auto;
+    overflow:hidden;
+    color:white;
+    padding:10px;
+    animation-delay: .5s;
 }

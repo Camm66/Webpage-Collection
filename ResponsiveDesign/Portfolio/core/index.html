@@ -37,8 +37,10 @@
                          <nav>
                              <ul class="main-nav hidden-nav js--main-nav">
                                  <li><a class="js--scroll-to-portfolio">Portfolio</a></li>
+                                 <li><div class="main-nav--divider">&#124;</div></li>
                                  <li><a class="js--scroll-to-about">Bio</a></li>
-                                 <li><a>Contact</a></li>
+                                 <li><div class="main-nav--divider">&#124;</div></li>
+                                 <li><a class="contact">Contact</a></li>
                              </ul>
                              <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
                         </nav>
@@ -46,7 +48,8 @@
                 </div>
                 
                 <div class="js--circle" id="circle-text">
-                    &bull;&bull;HTML&bull;&bull;CSS&bull;&bull;JAVASCRIPT&bull;&bull;JAVA&bull;&bull;PYTHON&bull;&bull;WORDPRESS&bull;&bull;SQL
+                    &bull;&bull;UNDER-CONSTRUCTION&bull;&bull;UNDER-CONSTRUCTION&bull;&bull;UNDER-CONSTRUCTION
+                    <!--&bull;&bull;HTML&bull;&bull;CSS&bull;&bull;JAVASCRIPT&bull;&bull;JAVA&bull;&bull;PYTHON&bull;&bull;WORDPRESS&bull;&bull;SQL-->
                 </div>
                 
             </figure>
@@ -55,54 +58,35 @@
         <section class="page clearfix" id="portfolio-section">
             <h1 class="js--page-header">Portfolio</h1>
             <div class="portfolio js--portfolio">
-                <div class="portfolio__entry">
-                        <img src="resources/css/img/Test_IMG.PNG" class="entry__img">
-                    <div class="entry__content">
-                        <h3>Example</h3>
-                        <p>
+                    <div class="portfolio__entry"> 
+                        <div class="entry__img">
+                            <img src="resources/css/img/Test_IMG.PNG">
+                        </div>
+                        <div class="entry__description">
+                            <h3>Example</h3>
+                            <p>
                             <b>Description:</b> 
-                            <br>
-                            Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content.
-                        </p>
-                        <br><br>
-                        <p>
-                            <b>Keywords:</b> 
-                            <br>
-                            #HTML #CSS #JavaScript #Python #Flask #WebDesign
-                        </p>
-                        
+                                <br>
+                                Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content.
+                            </p>
+                            <br><br>
+                            <p>
+                                <b>Keywords:</b> 
+                                <br>
+                                #HTML #CSS #JavaScript #Python #Flask #WebDesign
+                            </p>
+                        </div>
+                        <div class="entry__links">
+                            <ul>
+                                <li><a href="#"><button class="link-btn"><i class="ion-social-github"></i> Git Repo</button></a></li>
+                                <li><a href="#"><button class="link-btn">&nbsp;&nbsp;&nbsp;<i class="ion-earth"></i>&nbsp;&nbsp;Live&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="entry__links">
-                        <h3>View</h3>
-                        <ul>
-                            <li><a href="#"><button class="link-btn"><i class="ion-social-github github-icon"></i> Git Repo</button></a></li>
-                            <li><a href="#"><button class="link-btn">&nbsp;&nbsp;&nbsp;<i class="ion-earth"></i>&nbsp;&nbsp;Live&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="portfolio__entry">
-                    <img src="resources/css/img/Test_IMG.PNG" class="entry__img">
-                    <div class="entry__content">
-                        <h3>Example</h3>
-                        <p>
-                            <b>Description:</b> 
-                            <br>
-                            Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content.
-                        </p>
-                        <br><br>
-                        <p>
-                            <b>Keywords:</b> 
-                            <br>
-                            #HTML #CSS #JavaScript #Python #Flask #WebDesign
-                        </p>
-                    </div>
-                    <div class="entry__links">
-                        <h3>View</h3>
-                        <ul>
-                            <li><a href="#"><button class="link-btn"><i class="ion-social-github github-icon"></i> Git Repo</button></a></li>
-                            <li><a href="#"><button class="link-btn">&nbsp;&nbsp;<i class="ion-earth"></i>&nbsp;&nbsp;Live&nbsp;&nbsp;&nbsp;&nbsp;</button></a></li>
-                        </ul>
-                    </div>
+                <div class="portfolio__nav">
+                        <img src="resources/css/img/Test_IMG.PNG" class="portfolio__nav_thumb">
+                        <img src="resources/css/img/Test_IMG.PNG" class="portfolio__nav_thumb">
+                        <img src="resources/css/img/Test_IMG.PNG" class="portfolio__nav_thumb">
                 </div>
             </div>
         </section>
@@ -119,7 +103,7 @@
                     Donec sit amet facilisis lectus. Ut auctor placerat est vel elementum. Aliquam varius condimentum lacus vel malesuada. Sed ac faucibus ante. Maecenas scelerisque lorem sed vestibulum tempus. Suspendisse pulvinar odio in mauris consequat bibendum.
                 </div>
                 <div class="profile__skills">
-                    <div id="tags">
+                    <div id="tags" class="vertical-center">
                         <a href="#" rel="6">Python</a>
                         <a href="#" rel="7">HTML</a>
                         <a href="#" rel="7">JavaScript</a>
@@ -136,6 +120,8 @@
             </div>
             <div id="social-bottom"></div>
         </section>
+<!--        <section class="page contact-section" id="contact-section">
+        </section>-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
         <script src="vendors/js/jquery.waypoints.min.js"></script>

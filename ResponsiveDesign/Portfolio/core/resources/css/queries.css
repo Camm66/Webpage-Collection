@@ -45,7 +45,23 @@
  {
      .home-content { 
          position: relative; 
-         top: 40%;
+         top: 35%;
+         margin-left: -4%;
+     }
+     
+     #js--home-nav .mobile-nav-icon{
+         display: none;
+     }
+     #js--home-nav .hidden-nav {
+         font-size: 120%;
+         display: block;
+         width: 120%;
+         margin-top: 20%;
+         margin-left: -7%;
+     }
+     
+     #js--sticky-nav .mobile-nav-icon{
+         display: block;
      }
      
      /*---------Portfolio-Mobile--------*/
@@ -69,7 +85,7 @@
     }
     
     .entry__content{
-        font-size: 250%;
+        font-size: 150%;
         padding-bottom: 25px;
     }
      
@@ -82,20 +98,10 @@
      }
      
     .entry__links ul{
-        font-size: 300%;
+        font-size: 150%;
         padding-top: 0;
      }
      
-     .entry__links ul li{
-         display: inline-block;
-         padding: 0 4% 6% 0;
-     }
-     
-     .link-btn {
-         float: right;
-         text-align:center;
-         padding: 10px;
-     }
      
      /*---------About-Mobile--------*/
      .profile {
