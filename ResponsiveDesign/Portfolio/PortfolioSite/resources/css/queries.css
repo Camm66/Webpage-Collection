@@ -6,6 +6,7 @@
 
 /* Small tablet to big tablet: from 768px to 1023px */
 @media only screen and (max-width: 1023px){
+    .portfolio__entry { margin-top: 10%}
     .portfolio__nav { margin: 3% auto 2% auto; }
     .portfolio__nav_thumb { width: 25%;}
 }
@@ -45,6 +46,18 @@
          font-weight: 400;
          font-size: 100%;
          margin: 5%;
+     }
+     
+    .contact:hover {
+         color: #b10235;
+     }
+     
+     .sticky .contact .tooltip {
+        display: none;
+     }
+     
+     .sticky .contact {
+         cursor: none;
      }
      
      .home-content { 
@@ -161,4 +174,28 @@
          border-bottom:4px solid black;
          border-radius: 0px;
      }
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    page {
+        width: 100%;
+    }
+    .home-content {
+        font-size: 150%;
+        display: block;
+        top: 20%;
+        width: 80%;
+        margin-left: 3%;
+    }
+    .name {
+        font-size: 150%;
+    }
+    
+    #portfolio-section h1{
+        font-size: 40px;
+    }
+    
+    #social-bottom { 
+    display: none}
 }
