@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
-import Person from './Person/Person';
+import classes from './App.css';
+import Person from '../Components/Person/Person';
+import Persons from '../Components/PersonList/Persons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
@@ -43,46 +44,30 @@ class App extends Component {
   }
 
   render() {
-    const style = {
-      backgroundColor: 'green',
-      color: 'white',
-      font: 'inherit',
-      border: '1px solid blue',
-      padding: '8px',
-      cursor: 'pointer',
-    }
-
     let persons = null;
+    let buttonClass ='';
 
     if (this.state.showPersons){
-      persons = (
-        <div>
-          {this.state.persons.map((person, index) => {
-            return <Person name={person.name} 
-                           age={person.age} 
-                           key={person.id}
-                           click={() => this.deletePersonHandler(index)}
-                           changed={(event) => this.nameChangeHandler(event, person.id)}/>
-          })}
-        </div>
-      );
-      style.backgroundColor = 'red'
+      persons = <Persons persons={this.state.persons} 
+                         clicked={this.deletePersonHandler} 
+                         changed={this.nameChangeHandler}/>
+
+      buttonClass = classes.Red
     };
 
-    const classes = [];
+    const assignedClasses = [];
     if(this.state.persons.length <=2){
-      classes.push('red');
+      assignedClasses.push(classes.red);
     }
     if(this.state.persons.length <= 1){
-      classes.push('bold');
+      assignedClasses.push(classes.bold);
     }
 
     return (
-     <div className="App">
+     <div className={classes.App}>
       <h1>React App</h1>
-      <p className={classes.join(' ')}>Here is our practice project!</p>
-      <button style={style}
-              className='btn btn-primary'
+      <p className={assignedClasses.join(' ')}>Here is our practice project!</p>
+      <button className={buttonClass}
               onClick={this.togglePersonsHandler}>Switch name</button>
       {persons}
     </div>
